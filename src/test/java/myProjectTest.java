@@ -9,9 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class myProjectTest {
 
     @Test
-    public void myProjectTest(){
+    public void myProjectTest() {
 
-        System.setProperty("webdriver.chrome.driver","c:/drivers/chrome/chromedriver100.exe");
+        System.setProperty("webdriver.chrome.driver", "c:/drivers/chrome/chromedriver100.exe");
         WebDriver myProjectTest = new ChromeDriver();
 
         String regex = "\\w{10}\\@gmail\\.com";
@@ -41,5 +41,7 @@ public class myProjectTest {
 
         myProjectTest.findElement(By.id("myInput_Password")).sendKeys("Password123!");
         myProjectTest.findElement(By.xpath("/html/body/div/div/form/fieldset/button")).click();
+
+        myProjectTest.close();
     }
 }
